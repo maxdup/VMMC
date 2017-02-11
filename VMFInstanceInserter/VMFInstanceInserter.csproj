@@ -42,6 +42,7 @@
     <Compile Include="VMFFile.cs" />
     <Compile Include="VMFStructure.cs" />
     <Compile Include="VMFValue.cs" />
+    <Compile Include="VMMFile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

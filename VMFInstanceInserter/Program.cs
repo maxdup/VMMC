@@ -47,8 +47,10 @@ namespace VMFInstanceInserter
             String del = "Deleting ";
             String renaming = "Renaming {0} to {1}";
 
-            if (cleanup) {
-                if (File.Exists(dest)) {
+            if (cleanup)
+            {
+                if (File.Exists(dest))
+                {
                     Console.WriteLine(del + dest);
                     File.Delete(dest);
                 }
@@ -56,8 +58,10 @@ namespace VMFInstanceInserter
                 String prt = rootName + ".prt";
                 String tempPrt = rootName + ".temp.prt";
 
-                if (File.Exists(tempPrt)) {
-                    if (File.Exists(prt)) {
+                if (File.Exists(tempPrt))
+                {
+                    if (File.Exists(prt))
+                    {
                         Console.WriteLine(del + prt);
                         File.Delete(prt);
                     }
@@ -80,14 +84,25 @@ namespace VMFInstanceInserter
                     Console.WriteLine(renaming, tempLin, lin);
                     File.Move(tempLin, lin);
                 }
-            } else {
-                foreach (String path in fgdpaths) {
-                    VMFStructure.ParseFGD(path);
-                }
+            }
+            else
+            {
+                if (vmf.EndsWith(".vmf"))
+                {
 
-                VMFFile file = new VMFFile(vmf);
-                file.ResolveInstances();
-                file.Save(dest);
+                    foreach (String path in fgdpaths)
+                    {
+                        VMFStructure.ParseFGD(path);
+                    }
+
+                    VMFFile file = new VMFFile(vmf);
+                    file.ResolveInstances();
+                    file.Save(dest);
+                }
+                else if (vmf.EndsWith(".vmm"))
+                {
+                    VMMFile file = new VMMFile(vmf);
+                }
             }
         }
     }
