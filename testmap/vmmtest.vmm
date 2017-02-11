@@ -1,0 +1,14 @@
+Info
+{
+	"NextInternalID" "2"
+}
+Maps
+{
+	VMF
+	{
+		"Name" "main"
+		"File" "main.vmf"
+		"InternalID" "1"
+		"TopLevel" "1"
+	}
+}

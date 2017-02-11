@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace VMFInstanceInserter
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 #if !DEBUG
             Directory.SetCurrentDirectory(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location));
@@ -89,11 +89,6 @@ namespace VMFInstanceInserter
                 file.ResolveInstances();
                 file.Save(dest);
             }
-
-#if DEBUG
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
-#endif
         }
     }
 }
