@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "6157"
-	"mapversion" "16"
+	"editorbuild" "7293"
+	"mapversion" "18"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "16"
+	"mapversion" "18"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -578,7 +578,7 @@ entity
 	"id" "17"
 	"classname" "func_instance"
 	"angles" "-0 0 0"
-	"file" "test_vecline_instance.vmf"
+	"file" "instancetest_vecline_wheel.vmf"
 	"fixup_style" "1"
 	"origin" "-64 128 0"
 	editor
@@ -662,7 +662,7 @@ entity
 	"id" "118"
 	"classname" "func_instance"
 	"angles" "-0 -24 0"
-	"file" "test_vecline_instance.vmf"
+	"file" "instancetest_vecline_wheel.vmf"
 	"fixup_style" "1"
 	"origin" "40.0972 152.248 0"
 	editor
@@ -678,7 +678,7 @@ entity
 	"id" "136"
 	"classname" "func_instance"
 	"angles" "-0 55 0"
-	"file" "test_vecline_instance.vmf"
+	"file" "instancetest_vecline_wheel.vmf"
 	"fixup_style" "1"
 	"origin" "-171.327 68.5659 0"
 	editor
@@ -804,7 +804,7 @@ entity
 	"id" "314"
 	"classname" "func_instance"
 	"angles" "-0 -90 0"
-	"file" "test_vecline_instance.vmf"
+	"file" "instancetest_vecline_wheel.vmf"
 	"fixup_style" "1"
 	"origin" "192 32 0"
 	editor
@@ -820,7 +820,7 @@ entity
 	"id" "347"
 	"classname" "func_instance"
 	"angles" "-0 -37.5 0"
-	"file" "test_vecline_instance.vmf"
+	"file" "instancetest_vecline_wheel.vmf"
 	"fixup_style" "1"
 	"origin" "140.92 120.248 0"
 	editor

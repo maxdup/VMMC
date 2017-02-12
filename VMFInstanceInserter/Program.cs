@@ -87,14 +87,12 @@ namespace VMFInstanceInserter
             }
             else
             {
+                foreach (String path in fgdpaths)
+                {
+                    VMFStructure.ParseFGD(path);
+                }
                 if (vmf.EndsWith(".vmf"))
                 {
-
-                    foreach (String path in fgdpaths)
-                    {
-                        VMFStructure.ParseFGD(path);
-                    }
-
                     VMFFile file = new VMFFile(vmf);
                     file.ResolveInstances();
                     file.Save(dest);
@@ -102,6 +100,7 @@ namespace VMFInstanceInserter
                 else if (vmf.EndsWith(".vmm"))
                 {
                     VMMFile file = new VMMFile(vmf);
+                    file.VMMCollapse(dest);
                 }
             }
         }

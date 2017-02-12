@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7293"
-	"mapversion" "28"
+	"mapversion" "37"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -578,7 +578,7 @@ entity
 	"id" "31"
 	"classname" "func_instance"
 	"angles" "-0 -90 0"
-	"file" "instances/instancetest_box.vmf"
+	"file" "instances/instancetest_boxsub.vmf"
 	"fixup_style" "0"
 	"replace01" "$_light 0 255 0 400"
 	"targetname" "04"
@@ -596,7 +596,7 @@ entity
 	"id" "61"
 	"classname" "func_instance"
 	"angles" "-0 0 0"
-	"file" "instances/instancetest_box.vmf"
+	"file" "instances/instancetest_boxsub.vmf"
 	"fixup_style" "0"
 	"replace01" "$_light 255 0 0 400"
 	"targetname" "03"
@@ -614,29 +614,11 @@ entity
 	"id" "73"
 	"classname" "func_instance"
 	"angles" "-0 90 0"
-	"file" "instances/instancetest_box.vmf"
+	"file" "instances/instancetest_boxsub.vmf"
 	"fixup_style" "0"
 	"replace01" "$_light 255 255 0 400"
 	"targetname" "02"
 	"origin" "-112 -112 0"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 3500]"
-	}
-}
-entity
-{
-	"id" "76"
-	"classname" "func_instance"
-	"angles" "-0 180 0"
-	"file" "instances/instancetest_box.vmf"
-	"fixup_style" "0"
-	"replace01" "$_light 0 0 255 400"
-	"targetname" "01"
-	"origin" "112 -112 0"
 	editor
 	{
 		"color" "220 30 220"
@@ -681,6 +663,24 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "180"
+	"classname" "func_instance"
+	"angles" "-0 -180 0"
+	"file" "instances/instancetest_boxsub.vmf"
+	"fixup_style" "0"
+	"replace01" "$_light 255 255 0 400"
+	"targetname" "02"
+	"origin" "112 -112 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3500]"
 	}
 }
 cameras

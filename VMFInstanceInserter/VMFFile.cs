@@ -59,10 +59,10 @@ namespace VMFInstanceInserter
                 }
             }
 
-            LastID = Root.GetLastID();
-            LastNodeID = Root.GetLastNodeID();
+            updateIds();
 
-            stVMFCache.Add(path, this);
+            if (!stVMFCache.Keys.Contains(path))
+                stVMFCache.Add(path, this);
         }
 
         public void ResolveInstances()
@@ -162,8 +162,7 @@ namespace VMFInstanceInserter
                                 }
                             }
 
-                            LastID = Root.GetLastID();
-                            LastNodeID = Root.GetLastNodeID();
+                            updateIds();
                             break;
                         case "func_instance_parms":
                             structures.RemoveAt(i);
@@ -173,6 +172,12 @@ namespace VMFInstanceInserter
             }
 
             Console.WriteLine("Instances resolved.");
+        }
+
+        public void updateIds()
+        {
+            LastID = Root.GetLastID();
+            LastNodeID = Root.GetLastNodeID();
         }
 
         public void Save(String path)
