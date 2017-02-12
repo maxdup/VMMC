@@ -68,6 +68,7 @@ namespace VMFInstanceInserter
             { VMFStructureType.Entity, new Dictionary<String, TransformType>
             {
                 { "origin", TransformType.Position },
+                { "BasisOrigin", TransformType.Position },
                 { "angles", TransformType.Angle },
                 { "targetname", TransformType.EntityName },
                 { "parentname", TransformType.EntityName },
@@ -394,6 +395,17 @@ namespace VMFInstanceInserter
                         ((VMFNumberValue) kvClone.Value).Value += idOffset;
                     } else if (kvClone.Key == "nodeid") {
                         ((VMFNumberValue) kvClone.Value).Value += nodeOffset;
+                    } else if (kvClone.Key == "sides") {
+                        // remap faceids for cubemaps and overlays
+                        string[] sides = kvClone.Value.String.Split(' ');
+                        int[] sidesN = Array.ConvertAll(sides, s => int.Parse(s));
+                        string sidesoffset = "";
+                        foreach (int s in sidesN){
+                            sidesoffset += (s + idOffset) + " ";
+                        }
+                        VMFStringValue vmfvalue = new VMFStringValue();
+                        vmfvalue.String = sidesoffset.Trim();
+                        kvClone.Value.String = sidesoffset.Trim();
                     } else if (Type == VMFStructureType.Entity) {
                         TransformType trans = entDict.ContainsKey(kvClone.Key) ? entDict[kvClone.Key] : TransformType.None;
 

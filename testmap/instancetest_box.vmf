@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7293"
-	"mapversion" "39"
+	"mapversion" "41"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "39"
+	"mapversion" "41"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -314,7 +314,7 @@ entity
 	"EndV" "1"
 	"fademindist" "-1"
 	"material" "decals/decalgraffiti024a"
-	"sides" "222"
+	"sides" "222 223 6"
 	"StartU" "1"
 	"StartV" "0"
 	"uv0" "-32 -32 0"
@@ -967,13 +967,28 @@ entity
 		"logicalpos" "[0 0]"
 	}
 }
+entity
+{
+	"id" "1003"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"sides" "155 222 223"
+	"origin" "40 -40 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[96.5369 -70.5879 66.3972]"
-		"look" "[95.8292 -69.9234 66.1549]"
+		"position" "[73.4981 -59.2507 63.0624]"
+		"look" "[72.6703 -58.7651 62.7797]"
 	}
 }
 cordon
