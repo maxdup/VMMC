@@ -8,8 +8,8 @@
     <ProjectGuid>{ABF97382-417B-40DF-A9E5-9750A6457D91}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VMFInstanceInserter</RootNamespace>
-    <AssemblyName>vmfii</AssemblyName>
+    <RootNamespace>VMMCollapser</RootNamespace>
+    <AssemblyName>vmmc</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

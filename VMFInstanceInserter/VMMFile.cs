@@ -89,8 +89,7 @@ namespace VMFInstanceInserter
                 topmap.updateIds();
             }
             topmap.ResolveInstances();
-            topmap.Save(output);
-            
+            topmap.Save(vmfdir + ".vmf");
         }
     }
 }

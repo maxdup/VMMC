@@ -35,7 +35,7 @@ namespace VMFInstanceInserterTestProject
         {
             string[] args = new string[] { "../../../testmap/vmmtest.vmm" };
             VMFInstanceInserter.Program.Main(args);
-            Assert.IsTrue(File.Exists("../../../testmap/vmmtest.temp.vmf"));
+            Assert.IsTrue(File.Exists("../../../testmap/vmmtest.vmf"));
         }
     }
     [TestClass]
